@@ -12,6 +12,8 @@ Goals
 Let's suppose we just got some contract work with an E-commerce company named Tech_novan based in Bangalore City, an online hub for electronic gadgets and computer products. The website has a wide range of products ranging from laptops, tablets, Smartphones, Digital Cameras to Gaming hardware, monitors to printers, routers, and speakers. Shoppers can browse and buy a wide variety of electronics on the extensive but easy-to-navigate e-commerce site.
 
 The navigation and categorization are well defined, giving you suggestions for keywords as you type. In addition to this, they also have in-store sessions related to electronic gadgets or devices' functionality and provide feedback related to a particular model in these advice sessions. Customers come into the store, have sessions/meetings with a personal techie, then they can go home and order either on a mobile app or website for the device/gadget they want. Now, as a Data Scientist/ML Engineer, we are going to build a system called PASREFT(Prediction, Ad-Optimization, Segmentation and Recommendation Engine for Tech_Novan) in which we have to perform the following seven tasks for this company to maintain their overall revenue and marketing/advertisement cost, improvising the system to get the best results.
+
+
 Prediction System to increase revenue using Regression:
 Specifications
 The company is trying to decide whether to focus its efforts on its mobile app experience or its website. To solve this issue, we will keep a record of the average time spent on the app in minutes, average time spent on the website in minutes, length of membership of the peculiar customer to determine and predict the yearly amount spent by the customer by building various machine learning models. 
@@ -129,6 +131,7 @@ Holding all other features fixed, a 1 unit increase in Length of Membership is a
 For this particular scenario, a quick question:- Do you think the company should focus more on its mobile app or its website?
 This is tricky, there are two ways to think about this: Develop the Website to catch up to the performance of the mobile app, or develop the app more since that is what is working better. This sort of answer depends on the other factors going on at the company, you would probably want to explore the relationship between Length of Membership and the App or the Website before concluding!
 
+
 Ad-Optimization using Reinforcement Learning:
 Specifications
 In this particular task, we're going to optimize the online advertising by finding the best ad among different ad designs, the best ad that will converge the maximum customers to click on the ad and potentially buy the company's product.
@@ -145,6 +148,8 @@ Ad number five was the ad that was selected the most and was the ad with the hig
 The UCB algorithm did a great job but here is a constraint that is to identify this ad as soon as possible which is in a minimum number of rounds. We have to observe how many rounds are required for the UCB algorithm to be able to identify this ad with the highest clicks. We will implement this by tweaking the number of customers as a parameter. With 5000 rounds that is with 5000 users, the UCB can identify the ad with the highest CTR. If we replace 5000 here with 1000 and still it can identify the ad with the highest CTR which is still ad 5. Now, we're going to replace that 1000 here with 500. And 500 rounds is not enough for the UCB algorithm to identify the best ad, the UCB identified the best ad as an ad of index 7 so 500 is not enough.
 
 Now, if we use the Thompson Sampling algorithm with the same data set then it will give the correct result even with 500 users i.e. it was able to find the ad number 5 with the highest CTR even in 500 rounds. And therefore this technique is more powerful and efficient than UCB in most situations.
+
+
 
 Prediction System for Best Ad using Classification:
 Specifications
@@ -273,6 +278,8 @@ Accuracy: 97.2%
 So, as we can see Support Vector Machine and ANN has correctly predicted the result with the highest accuracy i.e. 96.80 and 97.2 as well as good precision, recall value which is using RBF as a kernel and NN with two hidden layers which represent that the data here is non-linear in nature. Also, we got the magnificent result that out of 520 women users, around 260 have clicked our ad to see the specific gadget and out of 480 men, around 230 have clicked our ad which shows in total around half of the new users found our ad engaging.
 
 
+
+
 Prediction System for Purchasing Product using Classification:
 Specifications
 Now, after solving all these tasks, we are interested in the main problem that is whether the person is interested in buying the product or not i.e. whether the particular customer after attending all the brainstorming sessions and clicking on the ad that has the highest CTR, has purchased any of the company's product. So, using classification, we are going to predict whether the customer has purchased the product or not based on two features that are the age of the customer and his estimated salary in dollars per annum. So, it is quite clear that from our previous dataset, around 500 customers have clicked the best design ad, so we are taking the information that is age and estimated salary of 400 customers.
@@ -391,6 +398,9 @@ Standard Deviation: 5.972
 1       0.82      0.88      0.85        32
 
 So, as we can see KNN Classification has predicted with best average accuracy i.e. 91% with standard deviation of 5.57% (and also precision, recall values are also good) whether the customer will buy the product or not after clicking the ad with the best design or the ad with maximum click-through rates. It means our model is 91 percent efficient in predicting the correct number of users who have either purchased the product or not. Also, out of the 400 customers, around 140 customers have brought something for them either from the company's website or app or through visiting the store which is tremendously contributing to the company's profit.
+
+
+
 Customer Segmentation using Clustering:
 Specifications
 The strategy team of Tech_Novan collected some data about their customers. Each row corresponds to a customer of the organization. And for each of these customers, the data analyst of this team gathered the following information that includes the customer's I.D., their gender, their age, their annual income, and then the spending score that can take values between 1 and 100. The spending score is a metric made by the company to measure how much each customer spends. And so they made this metric taking values from 1 to 100. The scale of the metric is such that the lower the score, the less the customer spends, and the higher the score the more the customer spends. And this is in a certain period, let's say in the past year.
@@ -406,6 +416,9 @@ This would be interesting to target because maybe we're missing out on a lot of 
 Now, the final cluster which is like an average cluster and contains customers who earn an average annual income and spend normally on the company's website as well as come sometimes for getting in-store advice sessions. And for this peculiar class, we cannot do much as we don't want to target the ones that have a low annual income. So we want to protect them at the same time.
 
 So, here we identified some different clusters of customers and for each of them, we can deploy different marketing strategies or different business strategies which will boost customers in some of the clusters and will protect them in other clusters.
+
+
+
 
 Recommender System using Collaborative Filtering and Association Rule Mining:
 Specifications
@@ -567,6 +580,9 @@ Smartphones	Wireless Bluetooth Earbuds 0.004219	0.281818	4.208943
 Split Air-Conditioners    Air Purifiers	0.004627	0.369565	3.993478
 Tablets		Wireless Headphones0.005580	0.303704	3.887831
 Air Coolers	               Air Purifiers		0.013473	0.295522	3.193380
+
+
+
 
 Feature Selection for Predicting Price Category of Smartphone:
 Specifications
